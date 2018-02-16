@@ -16,6 +16,7 @@ public class Main {
 
         Main main = new Main();
         main.populateArrayList();
+        main.displayCarModel();
     }
 
     private void populateArrayList() {
@@ -25,6 +26,14 @@ public class Main {
         carsList.add(new Car("Honda", "Civic", "Black"));
         carsList.add(new Car("Honda", "Insight", "Blue"));
         carsList.add(new Car("Tesla", "Model 3", "Grey"));
+    }
+
+    private void displayCarModel() {
+
+        for (Car car : carsList) {
+            System.out.println(car.getModel());
+        }
+
     }
 
 
