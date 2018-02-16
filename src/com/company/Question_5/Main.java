@@ -1,4 +1,5 @@
 package com.company.Question_5;
+import java.util.*;
 
 public class Main {
 
@@ -10,7 +11,37 @@ public class Main {
          4. Have the default case tell the user to input the correct input you are looking for and use recursion to run the switch again.
          */
 
+         Main main = new Main();
+         main.color();
 
+
+    }
+
+    private void color() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("What is your favorite color? Red, Blue Yellow, or other?");
+
+        String color = input.nextLine();
+
+        switch (color) {
+            case "Red":
+                System.out.println("Red is your favorite color");
+                break;
+            case "Blue":
+                System.out.println("Blue is your favorite color");
+                break;
+            case "Yellow":
+                System.out.println("Yellow is your favorite color");
+                break;
+            case "Other":
+                System.out.println("Your favorite color is not listed here");
+                break;
+            default:
+                System.out.println("Could not read input. Please try again. Remember that capitalization matters.");
+                color();
+                break;
+        }
     }
 
 }
